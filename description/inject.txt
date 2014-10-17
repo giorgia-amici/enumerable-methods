@@ -1,0 +1,17 @@
+
+this enumearator module is used to accumulate values. You accumulate those values in the memo variable in your block.
+
+
+(1..10).inject{|memo, sum| block}
+
+
+sum = (1..5).inject{|sum, num| sum + num}
+
+
+1      => memo is 1 (the momo default value if we do not pass any argument to 						inject, is the first element of the array) 
+2 + 1  => memo is 3 (from here it starts executing the block)
+3 + 3  => memo is 6
+4 + 6  => memo is 10
+5 + 10 => memo is 15
+
+so it will return 15, the last value stored in memo.

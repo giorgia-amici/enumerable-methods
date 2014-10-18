@@ -1,20 +1,8 @@
 class Array
 
-	def self.first_instance_of_inject_functionality(array)
-		return array[0]
-	end
-
-	def self.second_instance_of_inject_functionality(array)
-		return array[0] + 5
-	end
-
-
-
-
-
-
 	def inject_iterators(memo=0,&blk)
 		array = self.clone
+		#return array: still the same value
 		if memo == 0
 			memo = self.first
 			array.shift
@@ -22,7 +10,8 @@ class Array
 		array.each do |x|
 			memo = yield memo,x
 		end
-		memo
+		return memo
+		#return array: here is the new array with the element shifted
 	end
 
 
@@ -48,8 +37,8 @@ will then remove this element from the array because I do not want to iterate th
 
 
 array.each 
-will iterate though each element of the (cloned) array and will yield the block and finally return the value of memo (that will be the value of memo after the last block execution)	
+will iterate though each element of the (cloned) array and will yield whichever block passed to the function the block and finally return the value of memo (that will be the value of memo after the last block execution)	
 
 =end
 
-
+#array.inject_iterators{|memo, n| memo + n}

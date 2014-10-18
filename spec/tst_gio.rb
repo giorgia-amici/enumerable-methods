@@ -40,13 +40,10 @@ end
 #array.new_inject
 
 
-def self.new_inj2
-	memo = 0
-	self.each do |x|
-		memo = memo + x
-	end
-	return memo
-end
+
+
+
+
 
 
 end

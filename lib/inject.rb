@@ -13,7 +13,34 @@ class Array
 
 
 
-
+	def inject_iterators(memo=0,&blk)
+		array = self.clone
+		if memo == 0
+			memo = self.first
+			array.shift
+		end
+		array.each do |x|
+			memo = yield memo,x
+		end
+		memo
+	end
 
 
 end
+
+
+
+
+
+
+# def new_inj(memo=0,&blk)
+# 	array = self.clone
+# 	if memo == 0
+# 		memo = self.first
+# 		array.shift
+# 	end
+# 		array.each do |x|
+# 			memo = yield memo, x
+# 		end
+# 		memo
+# 	end

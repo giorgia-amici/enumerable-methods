@@ -15,3 +15,11 @@ sum = (1..5).inject{|sum, num| sum + num}
 5 + 10 => memo is 15
 
 so it will return 15, the last value stored in memo.
+
+> gio.inject(1) do |memo, n|
+2.0.0-p576 :024 >     puts "memo #{memo} n #{n}"
+2.0.0-p576 :025?>   memo + n
+2.0.0-p576 :026?>   end
+memo 1 n 1
+memo 2 n 2
+memo 4 n 3

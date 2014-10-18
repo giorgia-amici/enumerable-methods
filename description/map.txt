@@ -1,0 +1,5 @@
+The map method execute the block once for each of
+the elements of the array.
+This method does not change the original array and it returns an array of the same dimensions of the original.
+
+At the same time map!() executes the block as the map () method with the difference that it changes the original array into the result from executing the block. 

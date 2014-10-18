@@ -11,24 +11,4 @@ class Array
 	end
 
 
-# map!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 end

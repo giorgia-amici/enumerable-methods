@@ -2,7 +2,6 @@ class Array
 
 	def inject_iterators(memo=0,&blk)
 		array = self.clone
-		#return array: still the same value
 		if memo == 0
 			memo = self.first
 			array.shift
@@ -11,7 +10,6 @@ class Array
 			memo = yield memo,x
 		end
 		return memo
-		#return array: here is the new array with the element shifted
 	end
 
 

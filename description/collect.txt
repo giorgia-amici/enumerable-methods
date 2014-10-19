@@ -1,0 +1,4 @@
+This method is really useful to find patters in an array. 
+
+
+Can be as well used as map without no substantial difference (both of them will return a new array without changing the original one)
